@@ -13,6 +13,7 @@ html,
 body {
   overflow: hidden;
   height: 100%;
+  font-weight: 700;
 }
 
 @theme inline {
@@ -57,6 +58,18 @@ body {
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
+  /* Shift the entire font-weight scale up slightly so all utilities
+     (font-normal, font-medium, etc.) render a bit heavier. */
+  --font-weight-thin: 700;
+  --font-weight-extralight: 700;
+  --font-weight-light: 700;
+  --font-weight-normal: 700;
+  --font-weight-medium: 700;
+  --font-weight-semibold: 700;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 700;
+  --font-weight-black: 700;
 }
 
 :root {
