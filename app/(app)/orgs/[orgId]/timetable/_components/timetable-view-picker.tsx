@@ -67,7 +67,7 @@ export function TimetableViewPicker({
     const params = new URLSearchParams({ anchor, mode: nextMode, span: nextSpan });
     if (roleId) params.set("roleId", roleId);
     if (tagId) params.set("tagId", tagId);
-    return `${anchor}?${params.toString()}`;
+    return `/orgs/${orgId}/timetable?${params.toString()}`;
   }
 
   function setMode(nextMode: "calendar" | "simple") {
