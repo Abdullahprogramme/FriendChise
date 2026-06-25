@@ -17,7 +17,7 @@ If you want the shorter overview, see [Quick Start](https://friendchise.app/doc/
 ### 2.1 Fork and clone the repo
 
 ```bash
-git clone https://github.com/<your-username>/FriendChise.git
+git clone https://github.com/IvanTran-2001/FriendChise.git
 cd FriendChise
 ```
 
