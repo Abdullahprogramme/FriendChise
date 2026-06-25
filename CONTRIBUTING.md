@@ -77,11 +77,11 @@ If you ever have an application error or out of sync rerun the whole thing espec
 pnpm dev
 ```
 
-Then open [localhost:3000/signin](http://localhost:3000/signin) and use either:
+Then open [localhost:3000/signin](http://localhost:3000/signin) or whatever you set it.
 
 ## 3. Pull requests
 
-- First of, everything should be in our dedicated [doc](https://friendchise.app/doc) 
+- First of, everything should be in our dedicated [doc](https://friendchise.app/doc) otherwise, make a discussion or ask around. 
 - Keep PRs focused on one change when possible.
 - Update docs if huge change or worth mentioning to help other developers
 - Avoid unrelated refactors in the same PR. Just make a different PR.
