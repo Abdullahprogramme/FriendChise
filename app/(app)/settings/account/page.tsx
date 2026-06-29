@@ -5,7 +5,6 @@ import { AccountSettingsClient } from "./account-settings-client";
 export default async function AccountSettingsPage() {
   await requireUserPage();
   const session = await auth();
-  if (!session?.user) return null;
 
   return (
     <div className="max-w-2xl mx-auto w-full">
