@@ -1,4 +1,4 @@
-import { PrismaClient, InviteType, InviteStatus } from "@prisma/client";
+import { PrismaClient, InviteStatus, InviteType, Prisma } from "@prisma/client";
 import type { SeedPlan } from "../seed-plan";
 import type { Users } from "../users";
 import { seedDonutShopA } from "../orgs/donut-shop-a/donut-shop-a";
@@ -8,7 +8,7 @@ export async function seedInvites(
   users: Users,
   org1: Awaited<ReturnType<typeof seedDonutShopA>>,
 ) {
-  const invites = [
+  const invites: Prisma.InviteCreateManyInput[] = [
     // Bot-slot invite — Sam invited to fill "Open Slot" bot in Donut Shop A
     {
       orgId: org1.org.id,
@@ -39,7 +39,7 @@ export async function seedInvites(
         workingDays: ["tue", "thu"],
       },
       status: i % 4 === 0 ? InviteStatus.ACCEPTED : i % 5 === 0 ? InviteStatus.DECLINED : InviteStatus.PENDING,
-    } as any);
+    });
   }
 
   // Dummy invites for 'owner'
@@ -56,7 +56,7 @@ export async function seedInvites(
         workingDays: ["mon", "tue", "wed", "thu", "fri"],
       },
       status: i % 3 === 0 ? InviteStatus.ACCEPTED : InviteStatus.PENDING,
-    } as any);
+    });
   }
 
   await prisma.invite.createMany({

@@ -6,7 +6,7 @@ import { seedDonutShopA } from "../orgs/donut-shop-a/donut-shop-a";
 export async function seedNotifications(
   prisma: PrismaClient,
   users: Users,
-  org1: Awaited<ReturnType<typeof seedDonutShopA>>,
+  _org1: Awaited<ReturnType<typeof seedDonutShopA>>,
 ) {
   const dummyNotifications = [];
 
